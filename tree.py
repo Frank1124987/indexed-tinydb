@@ -4,7 +4,6 @@ pip install bplustree
 """
 
 
-
 from functools import partial
 from logging import getLogger
 from typing import Optional, Union, Iterator, Iterable
