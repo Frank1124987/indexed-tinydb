@@ -82,9 +82,9 @@ class IndexManager:
         """Create a B+Tree index for a given key if it doesn't exist."""
         index_path = os.path.join(self.index_dir, f'btree_{alias}_{key}.db')
         if index_type == "TEXT":
-            return BPlusTree(index_path, order=4, serializer=RawBytesSerializer(), key_size=self.max_index_text_len)
+            return BPlusTree(index_path, order=3, serializer=RawBytesSerializer(), key_size=self.max_index_text_len)
         else:
-            return BPlusTree(index_path, order=4)
+            return BPlusTree(index_path, order=3)
 
     def update_index(self, alias, key_bytes, doc_id):
         """
